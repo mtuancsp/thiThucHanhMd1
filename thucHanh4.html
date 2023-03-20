@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1000" height="600"></canvas>
+<script>
+
+    let canvas = document.getElementById("myCanvas");
+    let ctx = canvas.getContext("2d");
+    class Rect {
+        constructor(x,y,width,height,color) {
+            this.x = x;
+            this.y = y;
+            this.width = width;
+            this.height = height;
+            this.color = color;
+        }
+        render(){
+            ctx.fillStyle = this.color;
+            ctx.fillRect(this.x, this.y, this.width, this.height);
+        }
+    }
+
+    let rect1 = new Rect(10,10,200,100,"#000000")
+    rect1.render();
+
+    let rect2 = new Rect(300,300,200,100,'#fa4b2a');
+    rect2.render();
+
+    let rect3 = new Rect(500,100,200,100,'yellow');
+    rect3.render();
+
+
+
+
+</script>
+</body>
+</html>

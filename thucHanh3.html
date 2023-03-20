@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function checkStr(str1, str2) {
+        if (str1.length > str2.length){
+            return false;
+        }
+        for (let i = 0; i <= str2.length - str1.length; i++) {
+            let j;
+            for (j = 0; j < str1.length; j++) {
+                if (str2[i+j] !== str1[j]) {
+                    break;
+                }
+            }
+            if (j === str1.length) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    const str1 = "abc";
+    const str2 = "123abc 345!";
+
+    console.log(checkStr(str1,str2))
+
+
+
+</script>
+</body>
+</html>
